@@ -44,9 +44,9 @@ app.get('/api', function(req, res){
   res.json({ message: 'Welcome to restaurant api' });
 });
 
-app.use(express.static(path.join(__dirname, './restaurant_management/')));
+app.use(express.static(path.join(__dirname, './dist/')));
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, './restaurant_management/index.html'))
+  res.sendFile(path.join(__dirname, './dist/index.html'))
 });
 
 
